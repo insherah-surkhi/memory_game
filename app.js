@@ -53,6 +53,25 @@ let cardArray = [
     img.addEventListener("click", flipCard)
     ) 
     });
+    var minutesLabel = document.getElementById("minutes");
+    var secondsLabel = document.getElementById("seconds");
+    var totalSeconds = 0;
+    setInterval(setTime, 1000);
+    
+    function setTime() {
+      ++totalSeconds;
+      secondsLabel.innerHTML = pad(totalSeconds % 60);
+      minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+    }
+    
+    function pad(val) {
+      var valString = val + "";
+      if (valString.length < 2) {
+        return "0" + valString;
+      } else {
+        return valString;
+      }
+    }
     //createBoard function
     
     function createBoard(grid, array) { 
@@ -94,29 +113,33 @@ let cardArray = [
     let firstCard = cardsId[0];
     let secondCard = cardsId[1];
     if (cardsSelected[0] === cardsSelected[1] && firstCard !== secondCard) { 
-
-     
     cardsWon += 1; 
     scoreBoard.innerHTML = cardsWon; 
-    setTimeout(checkWon,500) 
-    } else { 
+    
+    // setTimeout(checkWon,500) 
+    }
+     else
+      { 
     imgs[firstCard].setAttribute("src", "images/background1.jpg");
     imgs[secondCard].setAttribute("src", "images/background1.jpg"); alert("try again"); 
     
       imgs[firstCard].classList.remove("flip"); imgs[secondCard].classList.remove("flip"); 
+      clicks += 1; 
+
+      }
       if(clicks <3)
       {
       cardsSelected = []; 
       cardsId = []; 
-      clicks += 1; 
       clickBoard.innerHTML = clicks; 
       }
       else{
+      
         alert("lost"); 
-        setTimeout(window.location.reload() , 2000) 
-  
+        setTimeout(window.location.reload() , 2000) ;
+
       }
-    } 
+    
    
   }
     
@@ -143,23 +166,4 @@ let cardArray = [
     //  let x= document.getElementsByClassName("game_div"); 
 
     // }
-   // count up timers
-   var minutesLabel = document.getElementById("minutes");
-var secondsLabel = document.getElementById("seconds");
-var totalSeconds = 0;
-setInterval(setTime, 1000);
-
-function setTime() {
-  ++totalSeconds;
-  secondsLabel.innerHTML = pad(totalSeconds % 60);
-  minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
-}
-
-function pad(val) {
-  var valString = val + "";
-  if (valString.length < 2) {
-    return "0" + valString;
-  } else {
-    return valString;
-  }
-}
+  
