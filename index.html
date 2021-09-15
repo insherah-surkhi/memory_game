@@ -15,9 +15,15 @@
     <div class="container">
       <div class="data">
         <div class="score">Score : <span class="scoreBoard">0</span></div>
-        <div class="click">Click : <span class="clickBoard">0</span></div>
+        <div class="click">Clicks : <span class="clickBoard">0</span></div>
         <!-- the right div  -->
+        <div class="timer">
+        <label id="minutes">00</label>:<label id="seconds">00</label>
+      </div>
         <div class="game_options">
+          <button class="btn btn-primary" id="show_options" onclick="new_game()">
+           New  Game 
+          </button>
           <button class="btn btn-primary" id="show_options" onclick="show()">
             Game Options
           </button>
@@ -40,6 +46,9 @@
 <script>
   function myFunc(back_pic) {
     document.getElementById("game_img").innerHTML = back_pic.name;
+  }
+  function new_game() {
+    window.location.reload();
   }
   </script>
   </body>
