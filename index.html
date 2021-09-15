@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="back_pic.json" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="data">
+        <div class="score">Score : <span class="scoreBoard">0</span></div>
+        <div class="click">Click : <span class="clickBoard">0</span></div>
+        <!-- the right div  -->
+        <div class="game_options">
+          <button class="btn btn-primary" id="show_options" onclick="show()">
+            Game Options
+          </button>
+          <div class="game_div">
+          <table class="game_background">
+            <tr ><td id="game_img" style="width: 20px;height: 20px;"></td></tr>
+          </table>
+        </div>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="popup">
+          <button class="playAgain"><h1>PLAY AGAIN</h1></button>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+    
+<script>
+  function myFunc(back_pic) {
+    document.getElementById("game_img").innerHTML = back_pic.name;
+  }
+  </script>
+  </body>
+</html>
