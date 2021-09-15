@@ -1,14 +1,3 @@
-// let back_pic=[
-// {name:"background1",img:"images/background1.jpg"},
-// {name:"background2",img:"images/background2.jpg"},
-// {name:"background3",img:"images/background3.jpg"},
-// {name:"background4",img:"images/background4.jpg"},
-// {name:"background5",img:"images/background5.jpg"},
-// {name:"background6",img:"images/background6.jpg"},
-
-// ];
-
-
 let cardArray = [ 
     { name: "blue", img: "images/blue.jpg", }, 
     { name: "blue", img: "images/blue.jpg", },
@@ -162,8 +151,7 @@ let cardArray = [
     popup.style.display = "none"; 
     }
    
-    // function show() {
-    //  let x= document.getElementsByClassName("game_div"); 
-
-    // }
+    function new_game() {
+      window.location.reload();
+    }
   

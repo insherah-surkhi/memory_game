@@ -34,7 +34,7 @@
     .data { 
     display: flex; 
     justify-content: space-between; 
-    padding: 20px 30px; 
+    padding-left: 20px 30px; 
     font-size: 23px; 
     } 
     
@@ -42,10 +42,11 @@
     color: rgb(206, 121, 11);
     font-size: 30px; 
     }
-   .table {
-       margin-top: 20px;
-       border-collapse: collapse;
-       border-color: black;
-       border-style: double;
+   .mytable ,td,tr{
+        margin: 20px;
+       padding: 20px; 
+       border-collapse: separate;
+        border-style: 20px solid black;
    }
+   
    

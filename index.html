@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="background.json" />
     <link
@@ -10,7 +10,7 @@
       integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
       crossorigin="anonymous"
     />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   
   </head>
   <body>
     <div class="container">
@@ -19,23 +19,21 @@
         <div class="click">Clicks : <span class="clickBoard">0</span></div>
         <!-- the count up timer div  -->
         <div class="timer">
-        <label id="minutes">00</label>:<label id="seconds">00</label>
-      </div>
+          <label id="minutes">00</label>:<label id="seconds">00</label>
+        </div>
         <div class="game_options">
-          <button class="btn btn-primary" id="show_options" onclick="new_game()">
-           New  Game 
+          <button
+            class="btn btn-primary"
+            id="show_options"
+            onclick="new_game()"
+          >
+            New Game
           </button>
           <button class="btn btn-primary" id="show_options" onclick="show()">
             Game Options
           </button>
+
           
-         <!-- table ot the themes images -->
-          <table class="table table-danger">
-           <tr ><td ><img height="100px" width="100px" src="images/background1.jpg"></td><td ><img height="100px" width="100px" src="images/background2.jpg"></tr>
-           <tr ><td ><img height="100px" width="100px" src="images/background3.jpg"><td ><img height="100px" width="100px" src="images/background4.jpg"></tr>
-           <tr ><td ><img height="100px" width="100px" src="images/background5.jpg"><td ><img height="100px" width="100px" src="images/background6.jpg"></tr>
-          </table>
-        
         </div>
       </div>
       <div class="grid">
@@ -45,15 +43,8 @@
       </div>
     </div>
 
-    <script src="app.js"></script>
     
-<script>
-  function myFunc(back_pic) {
-    document.getElementById("game_img").innerHTML = back_pic.name;
-  }
-  function new_game() {
-    window.location.reload();
-  }
-  </script>
   </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="app.js"></script>
 </html>
