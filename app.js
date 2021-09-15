@@ -94,7 +94,7 @@ let cardArray = [
     let firstCard = cardsId[0];
     let secondCard = cardsId[1];
     if (cardsSelected[0] === cardsSelected[1] && firstCard !== secondCard) { 
-    alert("good job"); 
+    alert("good job AAAAAAA"); 
      
      
     cardsWon += 1; 
